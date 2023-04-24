@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*!q@4_%o+-#+b$_bk8nv+_yf!&j=q1al$oyq4ho0b)c9)vk7j@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://api4-connecttoamalmathew.b4a.run/']
 
 
 # Application definition
