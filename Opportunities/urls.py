@@ -4,10 +4,10 @@ from .views import *
 from . import views
 
 router = routers.DefaultRouter()
-router.register(r'', LeadView)
+router.register(r'', OpportunitiesView)
 
 urlpatterns = [
-    path('L001', include(router.urls)),
-    path('L001details', views.lead, name="leadsdetails")
+    path('OP001', include(router.urls)),
+    path('OP001details', views.opportunity, name="opportunitydetails")
 
 ]

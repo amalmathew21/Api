@@ -11,8 +11,8 @@ class LeadView(viewsets.ModelViewSet):
     serializer_class = LeadsModelSerializer
 
 
-def users(request):
-    response = requests.get('http://127.0.0.1:8000')
+def lead(request):
+    response = requests.get('http://127.0.0.1:8000/L001')
     leads = response.json()
 
-    return render(request, "templates/users.html", {'leads': leads})
+    return render(request, "templates/leads/lead.html", {'leads': leads})

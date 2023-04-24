@@ -1,0 +1,64 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"
+          crossorigin="anonymous">
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"
+
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/datatable.min.css' %}" />
+
+
+    <title>OPPORTUNITY</title>
+</head>
+<body>
+<div class="container-fluid p-2 bg-primary text-white text-center">
+    <h1>OPPORTUNITIES</h1>
+</div>
+<div class="container mt-5">
+      <table id="table1" class="table table-striped">
+         <thead>
+        <tr>
+            <th>Opportunity Id</th>
+            <th>Opportunity Name</th>
+            <th>Account Id</th>
+            <th>Lead Id</th>
+            <th>Amount</th>
+            <th>Stage</th>
+            <th>Expected Close Date</th>
+            <th>Probability</th>
+            <th>Created Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for x in opportunities %}
+            <tr>
+                <td>{{ x.opportunity_id }}</td>
+                <td>{{ x.opportunity_name }}</td>
+                <td>{{ x.account_id }}</td>
+                <td>{{ x.lead_id }}</td>
+                <td>{{ x.amount }}</td>
+                <td>{{ x.stage }}</td>
+                <td>{{ x.expected_close_date }}</td>
+                <td>{{ x.probability }}</td>
+                <td>{{ x.created_date }}</td>
+                <script src="{% static 'js/datatable.js' %}"></script>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+</div>
+
+<script src="{% static 'js/datatable.min.js' %}"></script>
+</body>
+</html>
