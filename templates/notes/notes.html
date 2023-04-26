@@ -38,8 +38,8 @@
         {% for x in notes %}
             <tr>
                 <td>{{ x.note_id }}</td>
-                <td>{{ x.account_id }}</td>
-                <td>{{ x.opportunity_id }}</td>
+                <td>{{ x.account_id.account_id }}</td>
+                <td>{{ x.opportunity_id.opportunity_id }}</td>
                 <td>{{ x.note_text }}</td>
                 <td>{{ x.created_date }}</td>
                 <script src="{% static 'js/datatable.js' %}"></script>
