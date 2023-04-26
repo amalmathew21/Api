@@ -4,7 +4,6 @@ from Accounts.models import AccountsModel
 from Leads.models import Leads
 
 # Create your models here.
-
 class OpportunitiesModel(models.Model):
     opportunity_id = models.CharField(primary_key=True,max_length=255)
     opportunity_name = models.CharField(max_length=255)
